@@ -7,16 +7,10 @@ img{
     height: 300px;
 }
 
-/* .mainContainer{
-    /* margin-right: 0px;
-    margin-left: 0px;
- } 
-  */
-
-
 .center{
     text-align: center;
 }
+
 
 
 /* -------------------------------------------- Footer ---------------------------------------- */
@@ -33,16 +27,17 @@ img{
   width: 100%;
   text-align: left;
   font: normal 16px sans-serif;
-  /* padding-top: 0px; */
   padding-right: 20px;
   padding-bottom: 7px;
   padding-left: 20px;
+  padding-top: 6px;
 }
 
 .footer-distributed .footer-left p {
   color: #8f9296;
   font-size: 14px;
   margin: 0;
+  user-select: none;
 }
 /* Footer links */
 
@@ -154,5 +149,16 @@ img{
   content: "\f0e1";
 }
 
+
+/* -------------------------------------------- Insert Page ---------------------------------------- */
+
+.marg{
+  margin-bottom: 198px;
+}
+
+.formSize{
+  width: 600px;
+  height: 500px;
+}
 
 /* --------------------------------------------  ---------------------------------------- */
