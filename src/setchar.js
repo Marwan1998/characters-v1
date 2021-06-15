@@ -1,3 +1,4 @@
+//This is a constructor
 function setValues(animeID, animNam, charNam, charPhotos) {
   this.id = animeID;
   this.anime = animNam;
