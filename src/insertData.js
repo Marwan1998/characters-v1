@@ -1,3 +1,7 @@
+import characters from "./data.js";
+// import renderCharacter from "./render.js";
+// import setValues from "./setchar.js";
+
 const ids = {
     img1: "img1",
     img2: "img2",
@@ -7,13 +11,15 @@ const ids = {
   };
 
 document.getElementById("formData").onsubmit = () => {
-    
-    console.log(document.getElementById(ids.img1).value);
-    console.log(document.getElementById(ids.img2).value);
-    console.log(document.getElementById(ids.img3).value);
-    console.log(document.getElementById(ids.animNam).value);
-    console.log(document.getElementById(ids.charNam).value);
+
+    let userData = {};
+    for(const elem in ids){ // fill the empty object with user form data.
+        userData[elem] = document.getElementById(ids[elem]).value;
+    }
+    // sendData(userData);
     resetForm();
+
+
     return false;
 };
 
@@ -21,4 +27,13 @@ function resetForm(){
     for(const elem in ids){
         document.getElementById(ids[elem]).value = "";
     }
+}
+
+function sendData(userData){
+    let Characters = characters();
+    // location.href = '../index.html';
+    Characters.push(userData);
+    // renderCharacter(Characters);
+    console.log(Characters);
+    location.href = '../index.html';
 }
