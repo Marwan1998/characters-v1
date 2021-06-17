@@ -2,6 +2,10 @@
 
 /* -------------------------------------------- Main Body ---------------------------------------- */
 
+.bodyColor{
+  background-color: #8f9296;
+}
+
 img{
     width: 400px;
     height: 300px;
@@ -11,7 +15,13 @@ img{
     text-align: center;
 }
 
+.navColor{
+  background-color: #4ea7ff;
+}
 
+.cardColor{
+  background-color: #b7b5b5;
+}
 
 /* -------------------------------------------- Footer ---------------------------------------- */
 
@@ -31,6 +41,7 @@ img{
   padding-bottom: 7px;
   padding-left: 20px;
   padding-top: 6px;
+  margin-top: 24px;
 }
 
 .footer-distributed .footer-left p {
@@ -152,8 +163,8 @@ img{
 
 /* -------------------------------------------- Insert Page ---------------------------------------- */
 
-.marg{
-  margin-bottom: 198px;
+.marg.footer-distributed{
+  margin-top: 0;
 }
 
 .formSize{

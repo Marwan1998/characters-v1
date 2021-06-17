@@ -13,10 +13,10 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <body class="bg-dark">
     <!------------------------------------------ Header -------------------------------------------->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
       <div class="container-fluid">
         <a class="navbar-brand" href="../index.html">Characters</a>
 
@@ -34,24 +34,13 @@
               <a class="nav-link" href="#">Insert</a>
             </li>
           </ul>
-          <form class="d-flex">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </div>
     </nav>
 
     <!------------------------------------------------ Body ---------------------------------------------->
 
-  <div class="formSize center">
+  <div class="formSize center ">
     <form id="formData" class="position-absolute top-50 start-50 translate-middle">
       <!-- <div class="mb-3">
         <label for="formFile" class="form-label">Upload Image 1</label>
@@ -66,33 +55,33 @@
         <input class="form-control" type="file" id="formFile">
       </div> -->
       <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon3">Image 1 URL</span>
+        <span class="input-group-text bg-info" id="basic-addon3">Image 1 URL</span>
         <input type="text" class="form-control" id="img1" aria-describedby="basic-addon3" autocomplete="off"/>
       </div>
       <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon3">Image 2 URL</span>
+        <span class="input-group-text bg-info" id="basic-addon3">Image 2 URL</span>
         <input type="text" class="form-control" id="img2" aria-describedby="basic-addon3" autocomplete="off" />
       </div>
       <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon3">Image 3 URL</span>
+        <span class="input-group-text bg-info" id="basic-addon3">Image 3 URL</span>
         <input type="text" class="form-control" id="img3" aria-describedby="basic-addon3" autocomplete="off" />
       </div>
       <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon3">Anime Name</span>
+        <span class="input-group-text bg-info" id="basic-addon3">Anime Name</span>
         <input type="text" class="form-control" id="animNam" aria-describedby="basic-addon3" autocomplete="off" />
       </div>
       <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon3">Character Name</span>
+        <span class="input-group-text bg-info" id="basic-addon3">Character Name</span>
         <input type="text" class="form-control" id="charNam" aria-describedby="basic-addon3" autocomplete="off" />
       </div>
 
-      <button type="submit" class="btn btn-primary ">Save</button>
+      <button type="submit" class="btn bg-primary">Save</button>
     </form>
   </div>
 
     <!------------------------------------------------ Footer ---------------------------------------------->
 
-    <footer class="footer-distributed">
+    <footer class="footer-distributed marg">
       <div class="footer-right">
         <!-- TODO: add or extract the fa class and delete other fornt awesome files -->
         <a

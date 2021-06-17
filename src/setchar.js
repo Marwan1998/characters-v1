@@ -9,7 +9,7 @@ function setValues(animeID, animNam, charNam, charPhotos) {
 
 function CreateDiv(id, anime, character, photos){
     
-    let elements = `<div class="card"><div id=id${id}
+    let elements = `<div class="card bg-info"><div id=id${id}
      class="carousel slide" data-bs-ride="carousel"><div class="carousel-inner"><div 
      class="carousel-item active"><img src=${photos[0]} class="d-block w-100" alt=${anime}></div><div 
      class="carousel-item"><img src=${photos[1]} class="d-block w-100" alt=${anime}> </div><div 
