@@ -1,5 +1,3 @@
-// TODO: TO add MVC style here soon.
-
 import characters from "./data.js";
 import setValues from "./setchar.js";
 
