@@ -43,6 +43,7 @@ function Controle(data, view) {
     document.getElementById("formData").onsubmit = () => {
 
         let userData = view.getUserData();
+        console.log(userData);
         data.addCharacter(userData);
         view.resetForm();
         // view.backHome();

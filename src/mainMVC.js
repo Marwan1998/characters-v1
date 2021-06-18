@@ -25,7 +25,9 @@ function  View() {
           char.id,
           char.charNam,
           char.animNam,
-          char.charPhotos
+          char.img1,
+          char.img2,
+          char.img3
         );
         document.getElementById("mainDiv").appendChild(value.createDiv);
       });
