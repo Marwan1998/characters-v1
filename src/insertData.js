@@ -3,11 +3,11 @@ import characters from "./data.js";
 // import setValues from "./setchar.js";
 
 const ids = {
+    animNam: "animNam",
+    charNam: "charNam",
     img1: "img1",
     img2: "img2",
     img3: "img3",
-    animNam: "animNam",
-    charNam: "charNam",
   };
 
 document.getElementById("formData").onsubmit = () => {

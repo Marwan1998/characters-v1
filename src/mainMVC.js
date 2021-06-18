@@ -16,13 +16,6 @@ function  Model() {
 }
 
 function  View() {
-  const ids = {
-    img1: "img1",
-    img2: "img2",
-    img3: "img3",
-    animNam: "animNam",
-    charNam: "charNam",
-  };
 
   return {
       
@@ -44,13 +37,8 @@ function  View() {
 function Controle(data, view) {
 
     view.renderCharacter(data.getData());
-    
-
 }
 
 var controle = new Controle(new Model(), new View());
 
 // controle;
-
-
-

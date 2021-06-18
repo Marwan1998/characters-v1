@@ -28,5 +28,4 @@ function CreateDiv(id, anime, character, photos){
     return colmDiv;
 }
 
-
 export default setValues;
