@@ -3,6 +3,7 @@ import setValues from "./setchar.js";
 
 function  Model() {
   let Chracters = new chracters();
+  //TODO: replace Characters array with MongoDB
 
   return {
     getData: function(){
