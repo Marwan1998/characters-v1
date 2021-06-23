@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-let ejs = require('ejs');
+// let ejs = require('ejs');
 const bodyParser = require("body-parser");
 
 const app = express();
@@ -14,15 +14,10 @@ app.use(express.static("/public"));
 
 app.get('/', (req, res) => {
   //TODO: here i will add find all the doc in mongodb and send it to the view
-  const char = {
-    id: 7,
-    img1: "../images/1.jpg",
-    img2:"../images/2.jpg",
-    img3: "../images/3.jpg",
-    animNam: 'Hunter-x-Hunter',
-    charNam: "Gon",
-  }
-  res.render('index', char);
+
+
+  
+  res.render('index', {characters});
 });
 
 
@@ -77,3 +72,31 @@ app.get('/images/:imgNum', function(req, res){
 
 
 app.listen(3000, () => console.log("Server running"));
+
+
+const characters = [
+  {
+      id: 1,
+      img1: './images/1.jpg',
+      img2: './images/2.jpg',
+      img3: './images/3.jpg',
+      charNam: "Luffy",
+      animNam: "Onepiece",
+  },
+  {
+      id: 2,
+      img1: './images/4.jpeg',
+      img2: './images/3.jpg',
+      img3: './images/2.jpg',
+      charNam: "Gon",
+      animNam: "hinter x hinter",
+  },
+  {
+      id: 3,
+      img1: './images/1.jpg',
+      img2: './images/2.jpg',
+      img3: './images/3.jpg',
+      charNam: "Nimi",
+      animNam: "OnePice",
+  },
+];
