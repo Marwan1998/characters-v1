@@ -50,8 +50,8 @@ function Controle(data, view) {
       let id = data.getLastID() + 1;
       let userData = view.getUserData(id);
       data.addCharacter(userData);
-      view.resetForm();
-      view.backHome();
+      // view.resetForm();
+      // view.backHome();
       return false;
     };
   }

@@ -8,15 +8,22 @@ const app = express();
 app.use(express.static("/public"));
 // app.use(express.static('static')); 
 
+// TODO: remove this line
+app.get('/', (req, res) => res.sendFile(__dirname + "/public/index.html"));
 
 
-app.get("/", function (req, res) {
+app.get("/index.html", function (req, res) {
 
   res.sendFile(__dirname + "/public/index.html");
 
 });
 
+app.get("/insert.html", function (req, res) {
 
+  res.sendFile(__dirname + "/public/insert.html");
+  // res.sendFile(__dirname + "/public/insert.html");
+
+});
 
 
 
