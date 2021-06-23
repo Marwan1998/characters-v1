@@ -63,4 +63,4 @@ function Controle(data, view) {
 
 var controle = new Controle(new Model(), new View());
 
-controle.start();
+// controle.start();

@@ -1,28 +1,49 @@
 const express = require("express");
 const mongoose = require("mongoose");
+let ejs = require('ejs');
 const bodyParser = require("body-parser");
 
 const app = express();
 
-// app.use(bodyParser.urlencoded({extended: true}));
+app.set('view engine', 'ejs');
+
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("/public"));
-// app.use(express.static('static')); 
-
-// TODO: remove this line
-app.get('/', (req, res) => res.sendFile(__dirname + "/public/index.html"));
 
 
-app.get("/index.html", function (req, res) {
 
-  res.sendFile(__dirname + "/public/index.html");
-
+app.get('/', (req, res) => {
+  //TODO: here i will add find all the doc in mongodb and send it to the view
+  const char = {
+    id: 7,
+    img1: "../images/1.jpg",
+    img2:"../images/2.jpg",
+    img3: "../images/3.jpg",
+    animNam: 'Hunter-x-Hunter',
+    charNam: "Gon",
+  }
+  res.render('index', char);
 });
 
-app.get("/insert.html", function (req, res) {
 
-  res.sendFile(__dirname + "/public/insert.html");
-  // res.sendFile(__dirname + "/public/insert.html");
 
+app.get("/insert.ejs", function (req, res) {
+  res.render('insert')
+});
+
+app.post("/insert.ejs", function(req, res){
+  //TODO: here i will only save the data in the mongodb db then redirect the home page
+
+  const char = {
+    id: "giveID",
+    img1: req.body.img1,
+    img2: req.body.img2,
+    img3: req.body.img3,
+    animNam: req.body.animNam,
+    charNam: req.body.charNam,
+  }
+
+  res.redirect('/');
 });
 
 
@@ -55,9 +76,4 @@ app.get('/images/:imgNum', function(req, res){
 
 
 
-
-
-
-app.listen(3000, function () {
-  console.log("Server running");
-});
+app.listen(3000, () => console.log("Server running"));
