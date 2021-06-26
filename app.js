@@ -28,10 +28,13 @@ const Character = mongoose.model("Character", characterSchema);
 
 app.get("/", async (req, res) => {
 
-  //TODO: Fix The Promise.
-  const characters = await getData();
+  getData()
+  .then(characters => res.render("index", {characters}))
+  .catch((err) => {
+    const characters = [{id:0, img1:"", img2:"", img3:"", animNam:"Error", charNam:"Error"}];
+    res.render("index", {characters}) // To avoid the undefind value.
+  });
 
-  res.render("index", {characters});
 });
 
 app.get("/insert.ejs", function (req, res) {
@@ -41,7 +44,7 @@ app.get("/insert.ejs", function (req, res) {
 app.post("/insert.ejs", function (req, res) {
   //TODO: here i will only save the data in the mongodb db then redirect the home page
 
-  //TODO: find the last id and use it to the new one.
+  //TODO 1: find the last id and use it to the new one.
 
   const char = new Character({
     id: 4, // Needs an id here
@@ -80,7 +83,6 @@ app.get("/images/:imgNum", function (req, res) {
 });
 
 app.listen(3000, () => console.log("Server running"));
-
 
 
 
