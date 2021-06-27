@@ -32,6 +32,7 @@ app.get("/", async (req, res) => {
   .then(characters => res.render("index", {characters}))
   .catch((err) => {
     const characters = [{id:0, img1:"", img2:"", img3:"", animNam:"Error", charNam:"Error"}];
+    console.log(err);
     res.render("index", {characters}) // To avoid the undefind value.
   });
 
@@ -41,13 +42,14 @@ app.get("/insert.ejs", function (req, res) {
   res.render("insert");
 });
 
-app.post("/insert.ejs", function (req, res) {
-  //TODO: here i will only save the data in the mongodb db then redirect the home page
+app.post("/insert.ejs", async function (req, res) {
 
-  //TODO 1: find the last id and use it to the new one.
+  let id ; 
+  await getLastID().then(value => id = value).catch(err => id=999); //get the last object's id from the DB
+  id+=1; // increase the id by one.
 
   const char = new Character({
-    id: 4, // Needs an id here
+    id: id, 
     img1: req.body.img1,
     img2: req.body.img2,
     img3: req.body.img3,
@@ -96,4 +98,16 @@ async function getData() {
     }
   });
   return characters;
+}
+
+async function getLastID(){
+  let id ;
+  await Character.find(function (err, character) {
+    if (!err) {
+      id = character[character.length-1].id;
+    }else{
+      id = 999; // to avoid the undefined id value
+    }
+  }).sort({id:1});
+  return id;
 }
