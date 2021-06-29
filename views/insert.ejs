@@ -55,6 +55,16 @@
     </form>
   </div>
 
+  <!-- 
+    this var 'isError' send from the app.js 
+    and it only true when error is occurred in saving data in DB
+  -->
+  <% if(isError){ %>
+    <script>
+      alert('please enter correct values');
+    </script>
+  <%} %>
+
     <!------------------------------------------------ Footer ---------------------------------------------->
 
     <footer class="footer-distributed marg">
