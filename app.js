@@ -52,7 +52,7 @@ app.get("/", async (req, res) => {
       img1: "",
       img2: "",
       img3: "",
-      animNam: "Error With geting he data",
+      animNam: "Error With geting The data",
       charNam: "please Refresh",
     },
   ];
