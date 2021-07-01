@@ -109,7 +109,11 @@ app.get("/images/:imgNum", (req, res) =>
   res.sendFile(__dirname + `/public/images/${req.params.imgNum}`)
 );
 
-app.listen(3000, () => console.log("Server running"));
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
+app.listen(port, () => console.log("Server is running"));
 
 function isEmpty() {
   Character.countDocuments(function (err, count) {
